@@ -4,11 +4,13 @@
 
 {% for sword in swords %}
 <div class="card">
-  <div class="card-content">
-    <span class="card-title">{{ sword.name }}</span>
-    <p>Legend: {{ sword.legend }}</p>
-    <p>Description: {{ sword.description }}</p>
-    <p>First Seen: {{ sword.firstSeen }}</p>
-  </div>
+  <a href="{% url 'detail' sword.id %}">
+    <div class="card-content">
+      <span class="card-title">{{ sword.name }}</span>
+      <p>Legend: {{ sword.legend }}</p>
+      <p>Description: {{ sword.description }}</p>
+      <p>First Seen: {{ sword.firstSeen }}</p>
+    </div>
+  </a>
 </div>
 {% endfor %} {% endblock %}
