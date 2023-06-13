@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.views.generic.edit import CreateView
 from .models import Sword
 
 def home(request):
@@ -16,3 +17,7 @@ def swords_index(request):
 def swords_detail(request, sword_id):
     sword = Sword.objects.get(id=sword_id)
     return render(request, 'swords/detail.html', { 'sword': sword })
+
+class SwordCreate(CreateView):
+    model = Sword
+    fields = '__all__'
