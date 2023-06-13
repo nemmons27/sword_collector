@@ -21,3 +21,4 @@ def swords_detail(request, sword_id):
 class SwordCreate(CreateView):
     model = Sword
     fields = '__all__'
+    success_url = '/swords/{sword_id}'
