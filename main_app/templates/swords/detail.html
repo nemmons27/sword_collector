@@ -10,6 +10,10 @@
         <p>Description: {{ sword.description }}</p>
         <p>First Seen: {{ sword.firstSeen }}</p>
     </div>
+    <div class="card-action">
+        <a href="{% url 'swords_update' sword.id %}">Edit</a>
+        <a href="{% url 'swords_delete' sword.id %}">Delete</a>
+    </div>
 </div>
 
 {% endblock %}
