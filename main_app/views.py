@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import Sword
 
 def home(request):
@@ -22,3 +22,11 @@ class SwordCreate(CreateView):
     model = Sword
     fields = '__all__'
     success_url = '/swords/{sword_id}'
+
+class SwordUpdate(UpdateView):
+    model = Sword
+    fields = ['breed', 'description', 'age']
+
+class SwordDelete(DeleteView):
+  model = Sword
+  success_url = '/Swords'
