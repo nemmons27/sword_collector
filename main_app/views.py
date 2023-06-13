@@ -25,8 +25,8 @@ class SwordCreate(CreateView):
 
 class SwordUpdate(UpdateView):
     model = Sword
-    fields = ['breed', 'description', 'age']
+    fields = ['legend', 'description', 'firstSeen']
 
 class SwordDelete(DeleteView):
-  model = Sword
-  success_url = '/Swords'
+    model = Sword
+    success_url = '/swords'

@@ -10,4 +10,4 @@ class Sword(models.Model):
     def __str__(self):
         return self.name
     def get_absolute_url(self):
-        return reverse('detail', kwargs={'cat_id': self.id})
+        return reverse('detail', kwargs={'sword_id': self.id})
