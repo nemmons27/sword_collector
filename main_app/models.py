@@ -2,8 +2,8 @@ from django.db import models
 from django.urls import reverse
 
 JOBS = (
-    ('P','Polish')
-    ('S','Sharpen')
+    ('P','Polish'),
+    ('S','Sharpen'),
     ('R','Remodel')
 )
 
